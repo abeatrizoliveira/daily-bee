@@ -1,5 +1,5 @@
 <div align="center">
-<img width="250" height="250" alt="Daily Bee" src="https://github.com/user-attachments/assets/bfd99a6b-d708-4642-b48b-4a4d44a6be6a" />
+<img width="250" height="250" alt="Ícone do daily bee" src="https://github.com/user-attachments/assets/1ddd28ff-073c-46df-aafb-52fbc5cd6d8b" />
 <h1>Daily Bee</h1>
 <img src="https://img.shields.io/badge/typescript-ffea98">
 <img src="https://badgen.net/github/issues/abeatrizoliveira/daily-bee?color=B389DF">
