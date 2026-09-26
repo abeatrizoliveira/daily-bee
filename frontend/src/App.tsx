@@ -1,26 +1,34 @@
+import { useEffect, useState } from "react";
 import "./app.css";
 import { AppRoutes } from "./routes/appRoutes";
 
 function App() {
-  setInterval(() => {
-    return <AppRoutes />;
-  }, 1000);
+  const [loading, setLoading] = useState<boolean>(true);
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(interval);
+  }, []);
 
-  return (
-    <div className="app">
-      <div className="image-fill">
-        <img
-          src="../src/assets/daily_bee_icon_w_letter.png"
-          className="image gray"
-        />
-        <img
-          src="../src/assets/daily_bee_icon_w_letter.png"
-          className="image color"
-        />
+  if (loading) {
+    return (
+      <div className="app">
+        <div className="image-fill">
+          <img
+            src="../src/assets/daily_bee_icon_w_letter.png"
+            className="image gray"
+          />
+          <img
+            src="../src/assets/daily_bee_icon_w_letter.png"
+            className="image color"
+          />
+        </div>
+        carregando...
       </div>
-      carregando...
-    </div>
-  );
+    );
+  }
+  return <AppRoutes />;
 }
 
 export default App;
