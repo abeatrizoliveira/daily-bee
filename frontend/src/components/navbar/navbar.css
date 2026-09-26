@@ -1,0 +1,182 @@
+.wrapper-nav {
+    background: linear-gradient(0.25turn, var(--bgPrimary), rgba(0, 0, 0, 0));
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15%;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--backgroundAlt);
+    width: 65px;
+    height: 100%;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 0px var(--shadow);
+    transition: width .5s;
+    overflow: hidden;
+}
+
+.navbar-content {
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar.active {
+    width: 100%;
+}
+
+.navbar button {
+    color: var(--text);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform .5s;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    position: relative;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: color 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.nav-links .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    flex-shrink: 0;
+}
+
+.nav-links .link-text {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width .5s, opacity .3s;
+}
+
+.navbar.active .nav-links .link-text {
+    opacity: 1;
+    max-width: 160px;
+    margin-left: 5px;
+}
+
+.nav-links a.active {
+    color: var(--backgroundAlt);
+}
+
+.nav-links a:hover {
+    background-color: var(--backgroundAltSecundary);
+}
+
+.nav-links a.active:hover {
+    background-color: transparent
+}
+
+.nav-links a:active {
+    transform: scale(0.9, 0.9);
+}
+
+.active-circle {
+    background-color: var(--primary);
+    height: 35px;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+    transform: translateY(calc(var(--position) * 60px));
+    transition: transform .3s;
+}
+
+
+/*Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .wrapper-nav {
+        background: linear-gradient(rgba(0, 0, 0, 0), var(--bgPrimary));
+        height: 12.5%;
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-direction: row;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .navbar button {
+        display: none;
+    }
+
+    .navbar-content {
+        flex-direction: row;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .active-circle {
+        display: none;
+    }
+
+    .nav-links a {
+        transition: color 0.5s, transform 0.5s;
+    }
+
+    .nav-links a.active {
+        color: var(--primary);
+        transform: scale(1.1, 1.1);
+    }
+}
+
+/*Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+    .wrapper-nav {
+        width: 25%;
+    }
+}
+
+/*Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/*X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */
+
+/*XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) { ... } */

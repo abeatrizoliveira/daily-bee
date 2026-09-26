@@ -7,6 +7,19 @@
     margin: 0;
 }
 
-html, body, #root{
+html,
+body,
+#root {
     height: 100%;
+}
+
+#root {
+    padding: 30px;
+}
+
+
+@media (max-width: 576px) {
+    #root {
+        padding: 15px;
+    }
 }
