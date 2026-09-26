@@ -1,9 +1,10 @@
+import Botao from "./shared/components/Theme";
 
 function App() {
 
   return (
     <>
-      <h1>Oi</h1>
+      <Botao/>
     </>
   );
 }
