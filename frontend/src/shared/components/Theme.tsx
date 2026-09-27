@@ -1,5 +1,6 @@
 import useTheme from "../hooks/useTheme";
 import ThemeProvider from "../providers/ThemeProvider";
+import { Moon, Sun, SunMoon } from "lucide-react";
 
 function BotaoTema() {
   const { theme, changeTheme } = useTheme();
@@ -8,6 +9,7 @@ function BotaoTema() {
   return (
     <>
       <div>
+        <Sun />
         <input
           type="radio"
           name="theme"
@@ -17,6 +19,7 @@ function BotaoTema() {
         />
         <label>Claro</label>
 
+        <Moon />
         <input
           type="radio"
           name="theme"
@@ -26,6 +29,7 @@ function BotaoTema() {
         />
         <label>Escuro</label>
 
+        <SunMoon />
         <input
           type="radio"
           name="theme"
@@ -35,8 +39,6 @@ function BotaoTema() {
         />
         <label>Sistema</label>
       </div>
-      <div></div>
-      <p>Tema atual: {theme}</p>
     </>
   );
 }

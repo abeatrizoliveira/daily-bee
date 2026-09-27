@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+#root {
+    padding: 30px;
+}
+
+.main-container {
+    margin-left: 65px;
+}
+
+@media (max-width: 576px) {
+    #root {
+        padding: 15px;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+}
