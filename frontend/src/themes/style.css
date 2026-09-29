@@ -13,13 +13,24 @@ body,
     height: 100%;
 }
 
+body{
+    background-color: var(--background);
+}
+
 #root {
     padding: 30px;
 }
 
+.main-container {
+    margin-left: 65px;
+}
 
 @media (max-width: 576px) {
     #root {
         padding: 15px;
+    }
+
+    .main-container {
+        margin-left: 0;
     }
 }

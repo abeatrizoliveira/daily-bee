@@ -27,7 +27,8 @@
     --textAlt: #fffcf181;
     --primary: #FFEA98;
     --primaryAlt: #d0bf7b;
-    --bgPrimary: rgba(255, 203, 91, 0.25);
+    --txtPrimary: #FFEA98;
+    --bgPrimary: rgba(255, 203, 91, 0.2);
     --secondary: #B389DF;
     --secondaryAlt: #8d6bb1;
     --txtSecondary: #CAACE9;

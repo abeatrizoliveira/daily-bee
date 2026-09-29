@@ -17,6 +17,7 @@ function Navbar() {
   const routes = ["/planner", "/tasks", "/", "/pomodoro"];
 
   const activateButton = routes.indexOf(pathname);
+  console.log(window.matchMedia("(prefers-color-scheme: dark)").matches)
 
   return (
     <div className="wrapper-nav">
