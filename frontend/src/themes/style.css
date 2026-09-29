@@ -13,6 +13,10 @@ body,
     height: 100%;
 }
 
+body{
+    background-color: var(--background);
+}
+
 #root {
     padding: 30px;
 }
